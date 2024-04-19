@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/week.dir/main.cpp.o -o week 

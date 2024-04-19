@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/xyt/cpptest/array/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/week.dir/main.cpp.o -c /home/xyt/cpptest/array/main.cpp",
+  "file": "/home/xyt/cpptest/array/main.cpp"
+}
+]
