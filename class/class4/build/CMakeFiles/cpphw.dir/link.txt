@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -rdynamic CMakeFiles/cpphw.dir/main.cpp.o CMakeFiles/cpphw.dir/clock.cpp.o -o cpphw 

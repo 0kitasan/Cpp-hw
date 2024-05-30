@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/xyt/cpp_proj/class/class2/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/cpphw.dir/main.cpp.o -c /home/xyt/cpp_proj/class/class2/main.cpp",
+  "file": "/home/xyt/cpp_proj/class/class2/main.cpp"
+},
+{
+  "directory": "/home/xyt/cpp_proj/class/class2/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/cpphw.dir/account.cpp.o -c /home/xyt/cpp_proj/class/class2/account.cpp",
+  "file": "/home/xyt/cpp_proj/class/class2/account.cpp"
+}
+]
