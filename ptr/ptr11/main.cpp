@@ -1,42 +1,52 @@
-#include <cstdlib> // 包含 strtod 函数的头文件
-#include <cstring>
 #include <iostream>
+#include <string>
 using namespace std;
 
 double charToDouble(char *str) {
-  char *endptr; // 用于指向转换后的结束字符
-  // 使用 strtod 函数将字符串转换为 double
-  double result = strtod(str, &endptr);
-  // 检查转换是否成功
-  if (*endptr != '\0') {
-    cerr << "Error: Conversion failed. Invalid input: " << str << endl;
-    exit(EXIT_FAILURE);
-  }
+  string input(str);
+  double result = stod(input);
   return result;
 }
 
-void add_float(char *a, char *b, char *res) {
+void add_float(char *a, char *b, string &res_str) {
   double a_double, b_double, res_double;
   a_double = charToDouble(a);
   b_double = charToDouble(b);
   res_double = a_double + b_double;
-  string res_str;
   res_str = std::to_string(res_double);
-  while (!res_str.empty() && res_str.back() == '0') {
-    res_str.pop_back();
+  bool found = false;
+  // found = false 说明是整数
+  for (auto it : res_str) {
+    if (it == '.') {
+      found = true;
+    }
   }
-  while (!res_str.empty() && res_str.front() == '0') {
-    res_str.erase(0, 1);
+  if (found) {
+    while (!res_str.empty() && res_str.back() == '0') {
+      res_str.pop_back();
+    }
+    while (!res_str.empty() && res_str.front() == '0') {
+      res_str.erase(0, 1);
+    }
   }
-  strcpy(res, res_str.c_str());
+  if (res_str == ".") {
+    res_str.push_back('0');
+    res_str = "0" + res_str;
+  }
 }
 
 int main() {
-  char num1[128], num2[128], res[128];
-  cin >> num1;
-  cin >> num2;
+  // char num1[128], num2[128], res[128];
+  // cin >> num1;
+  // cin >> num2;
+  // add_float(num1, num2, res);
+  // cout << res << endl;
+  char num1[128] = "0.001";
+  char num2[128] = "0.099";
+  string res;
   add_float(num1, num2, res);
   cout << res << endl;
+
   return 0;
 }
 
@@ -53,4 +63,17 @@ b不超过128个字符。 函数的输出参数char* res，保证浮点数a+b的
 这样没有整数部分）。
 注意：虽然要求结果字符串res必须有小数点且没有任何前缀后缀0，但是并不保证字符串a,
 b满足这两点。
+
+平台会对你编写的代码进行测试：
+
+测试输入：0.1 0.9
+预期输出：
+1.
+注意：不是1.0
+
+测试输入：.01 .09
+预期输出：
+.1
+注意：不是0.1，也不是0.10
+
 */

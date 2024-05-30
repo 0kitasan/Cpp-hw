@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240517-1124-Experimental"
+	Name="RedmiBook"
+	Generator="ctest-3.22.1"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="RedmiBook"
+	OSRelease="6.5.0-28-generic"
+	OSVersion="#29~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Apr  4 14:39:20 UTC 2"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="25"
+	ModelID="68"
+	ProcessorCacheSize="512"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15161"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1857.6"
+	>
+	<Testing>
+		<StartDateTime>May 17 19:24 CST</StartDateTime>
+		<StartTestTime>1715945071</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 17 19:24 CST</EndDateTime>
+		<EndTestTime>1715945071</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

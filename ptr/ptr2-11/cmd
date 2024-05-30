@@ -1,0 +1,90 @@
+User
+帮我写c++作业，以下是任务描述
+本关任务：实现两个正浮点数a, b的精确加法
+
+编程要求
+根据提示，在右侧编辑器补充代码，定义函数add_float(char* a, char* b, char* res)实现两个正浮点数a, b的精确加法。
+注意：只需要实现函数add_float，函数中没有任何输入输出。
+函数的输入参数char* a和char* b都是用字符串表示的正浮点数。保证a, b一定都包含一个字符是小数点’.’，保证其余字符全是0-9的数字。保证a, b不超过128个字符。
+函数的输出参数char* res，保证浮点数a+b的结果不超过 128 个字符。
+要求res字符串必须包含小数点’.’（即使结果是像下面 sample 1 这样并没有小数部分）。
+要求res字符串没有任何多余的前缀字符’0’和后缀字符’0’（即使结果像下面 sample 2 这样没有整数部分）。
+注意：虽然要求结果字符串res必须有小数点且没有任何前缀后缀0，但是并不保证字符串a, b满足这两点。
+
+测试说明
+平台会对你编写的代码进行测试：
+
+测试输入：0.1 0.9
+预期输出：
+1.
+注意：不是1.0
+
+测试输入：.01 .09
+预期输出：
+.1
+注意：不是0.1，也不是0.10
+
+
+需要你补全下列代码：
+
+#include <iostream>
+using namespace std;
+
+void add_float(char* a, char* b, char* res) {
+  
+}
+
+
+int main()
+{
+    char num1[128], num2[128], res[128];
+    cin >> num1;
+    cin >> num2;
+    add_float(num1, num2, res);
+    cout << res << endl;
+    return 0;
+}
+
+
+任务描述
+本关任务：写出所给代码中的两个函数funA和funB的声明与定义，使得funA(p)=a能实现通过指针p访问用户输入的字符串a，funB能将该字符串中的小写字母全部变成大写，并返回这个大写的字符串。
+
+编程要求
+根据提示，在右侧编辑器补充代码，除了实现funA和funB外，不能修改包括main函数在内的其他代码，不能在全局定义新的变量、指针、数组和函数等，不能调用其他的库。
+funA和funB内不能调用任何输入输出函数（包含但不限于cin,cout,scanf,prinf,getchar,putchar等等）。
+不允许存在内存泄漏，由于EC不能检测内存泄漏(同学们可以自行了解内存泄漏检测工具valgrind)，助教将进行手动评测（以最后一次提交为准）。
+每个测试用例有三行，每行对应一个字符串，长度不超过98，而且只含有小写和大写字母。
+输出有三行，将输入转化为大写后，按顺序输出。
+
+测试说明
+平台会对你编写的代码进行测试：
+
+测试输入：
+ieee
+tryAtry
+acisOK
+预期输出：
+IEEE
+TRYATRY
+ACISOK
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+// 写出两个函数的声明
+
+int main() 
+{
+    char a[100], b[100];
+    for(int i = 0; i < 3; ++i) 
+    {
+        char **p;
+        cin >> a;
+        funA(p) = a;
+        cout << funB(b, p) << endl;
+    }
+    return 0;
+}
+
+// 写出两个函数的定义
